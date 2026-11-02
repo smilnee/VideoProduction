@@ -14,6 +14,8 @@ install software, publish files or change repository access.
 2. Read the template's [rules](../../AGENTS.md),
    [overview](../../README.md) and
    [production skill](../skills/microstation-camtasia-video/SKILL.md).
+   Read the [Camtasia MCP connection guide](../../CAMTASIA-MCP.md) for the
+   bundled server and verified configuration formats.
    Inspect the target workspace's existing Copilot/agent instructions before
    changing any customization. Preserve unrelated work and stricter rules.
 3. If this workspace is already the template, validate the existing files rather
@@ -21,9 +23,16 @@ install software, publish files or change repository access.
    - `.github/skills/microstation-camtasia-video/`, including its references.
    - `.github/prompts/microstation-video.prompt.md`.
    - `.github/prompts/setup-video-production.prompt.md`.
+   - `CAMTASIA-MCP.md`.
+   - `integrations/camtasia/camtasia_mcp_server.py` and `requirements.txt`.
+   - `examples/camtasia-mcp.vscode.json` and `camtasia-mcp.copilot.json`.
    Compare destination files first. Merge compatible customizations; ask before
    replacing conflicting instructions. Never copy models, recordings, projects,
    credentials or machine-specific MCP configuration.
+   Carry forward ignore rules for virtual environments and live MCP settings
+   into the target's existing `.gitignore` without replacing unrelated rules.
+   Do not copy a virtual environment or turn the inert examples into active
+   connections during this customization-only setup.
 4. Integrate a short video-production section into the target's existing
    `AGENTS.md` or `.github/copilot-instructions.md`, following its conventions.
    If neither exists, create `AGENTS.md`. Do not add a competing always-on file
@@ -34,15 +43,19 @@ install software, publish files or change repository access.
 5. Discover whether MicroStation and Camtasia MCP tool definitions are available,
    without invoking tools that operate the live applications. Check approved
    user-supplied server configuration if needed without displaying secrets.
-   Do not invent server URLs, executable paths, ports or installation commands.
-   Report a missing server as a prerequisite, not a successful installation.
+   If Camtasia MCP is missing, use the bundled guide/examples to propose the
+   appropriate configuration, resolving paths from the actual checkout.
+   Do not invent a hosted server URL or a MicroStation bridge configuration.
+   Ask separately before installing dependencies, modifying live MCP settings,
+   enabling or starting a server. Report missing prerequisites, not success.
    Tool discovery alone does not prove a running application/bridge is connected.
 6. Validate skill name/folder matching, YAML frontmatter, descriptions, resource
    links and prompt placement. Explain that workspace customizations are not
    automatically installed globally. Suggest reloading VS Code if discovery
    has not refreshed; report runtime discovery as unverified unless observed.
 7. Show the installed files, any remaining prerequisites and how to invoke
-   `/microstation-video` with key frames and a named detail feature.
+   `/microstation-video` with key frames and a named detail feature. Link the
+   Camtasia connection guide and its connection-only setup prompt.
 
 Do not silently enable MCP servers, grant tool permissions or modify the user's
 global Copilot settings. Ask separately for any required personal installation.

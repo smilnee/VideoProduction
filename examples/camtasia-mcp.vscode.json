@@ -1,0 +1,11 @@
+{
+  "servers": {
+    "camtasia": {
+      "type": "stdio",
+      "command": "${workspaceFolder}\\integrations\\camtasia\\.venv\\Scripts\\python.exe",
+      "args": [
+        "${workspaceFolder}\\integrations\\camtasia\\camtasia_mcp_server.py"
+      ]
+    }
+  }
+}

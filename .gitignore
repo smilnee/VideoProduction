@@ -2,6 +2,10 @@
 .env.*
 !.env.example
 .vscode/mcp.json
+.mcp.json
+mcp-config.json
+.venv/
+venv/
 *.pem
 *.key
 *.pfx

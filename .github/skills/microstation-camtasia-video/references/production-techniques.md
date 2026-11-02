@@ -149,6 +149,11 @@ Inspect real motion plus full-size feature frames, including all required text.
 
 ## Camtasia MCP workflow
 
+For server source, dependencies, stdio registration, configuration examples and
+connection troubleshooting, follow the
+[Camtasia MCP connection guide](../../../../CAMTASIA-MCP.md).
+The template's custom Windows integration is not a hosted TechSmith endpoint.
+
 Discover tool definitions before use. The available MCP surface included:
 
 | Tools | Purpose |

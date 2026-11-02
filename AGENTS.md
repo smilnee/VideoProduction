@@ -6,9 +6,12 @@ footage or Camtasia edits, load the
 Documentation-only work must leave applications, models and timelines untouched.
 For Copilot adoption/setup, follow
 [the setup prompt](.github/prompts/setup-video-production.prompt.md) without
-starting production. For publication, follow [access requirements](ACCESS.md):
+starting production. For Camtasia MCP connection setup, use the
+[bundled server and guide](CAMTASIA-MCP.md); obtain separate approval for
+dependency installation, live configuration changes or server startup.
+For publication, follow [access requirements](ACCESS.md):
 never equate a private personal repository with enforced Bentley identity,
-and upload only reviewed template files, not project media or credentials.
+and upload only reviewed template/integration sources, not project media or credentials.
 
 ## Scope and tools
 

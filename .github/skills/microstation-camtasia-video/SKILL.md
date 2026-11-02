@@ -9,6 +9,10 @@ Follow the active project's model authority and
 [technical techniques](./references/production-techniques.md).
 This skill supplies a workflow, not permission to build geometry or replay an
 earlier project's controller. Documentation changes need no live application calls.
+For missing Camtasia MCP tools, use the
+[connection guide](../../../CAMTASIA-MCP.md) and bundled server/configuration
+examples. Obtain approval before installing dependencies or changing/starting
+connections; tool discovery alone does not prove a running editor.
 
 ## 1. Establish the film contract
 

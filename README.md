@@ -21,6 +21,9 @@ before granting or changing access.
   `/microstation-video`, or open it and use **Chat: Run Prompt**.
 - [Copilot setup guide and paste-ready installation prompt](COPILOT-SETUP.md):
   use this to adopt the template in another project.
+- [Camtasia MCP server and connection instructions](CAMTASIA-MCP.md):
+  bundled Windows server, dependency setup, VS Code/Copilot configuration
+  examples, trust, verification and troubleshooting.
 - [Runnable setup prompt](.github/prompts/setup-video-production.prompt.md):
   `/setup-video-production` installs/validates workspace customizations only;
   it does not start recording or change the model/editor.
@@ -35,11 +38,15 @@ prompts, and merge routing rules into existing instructions rather than
 overwriting them or replacing the project's README. Keep the skill and its
 reference together. Reload the workspace if new customizations are not discovered.
 
-This is a guidance template, not an installer or a recorded-video bundle.
-MicroStation/Camtasia MCP access is required for application operations.
+This template includes guidance, customizations and the custom local
+[Camtasia MCP server](integrations/camtasia/camtasia_mcp_server.py), not
+MicroStation/Camtasia installers or a recorded-video bundle. Follow the
+[connection guide](CAMTASIA-MCP.md) to install its dependencies and register it
+after approval; cloning alone does not connect it. An approved MicroStation MCP
+bridge is still a separate prerequisite.
 FFmpeg/FFprobe are optional host-side capture/inspection tools when available.
 Do not change applications or install dependencies merely to read these documents.
-The repository is documentation/customizations only. Keep models, footage,
+Keep models, footage,
 Camtasia bundles, credentials and machine-specific MCP settings outside it;
 the supplied ignore rules are a safeguard, not a substitute for reviewing uploads.
 

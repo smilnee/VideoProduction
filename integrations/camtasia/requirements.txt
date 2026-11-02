@@ -1,0 +1,5 @@
+mcp[cli]>=1.20,<2
+pywinauto>=0.6.9
+pywin32>=306
+pillow>=10
+psutil>=5.9

@@ -1,7 +1,9 @@
 # Set up GitHub Copilot for video production
 
-This template supplies instructions, a skill and prompts. It does not install
-MicroStation, Camtasia, their MCP servers or a GitHub Copilot subscription.
+This template supplies instructions, a skill, prompts and a custom local
+Camtasia MCP server with connection examples. It does not automatically install
+dependencies, register servers, install MicroStation/Camtasia or provide a
+GitHub Copilot subscription.
 Use VS Code with GitHub Copilot Chat in Agent mode and approved MCP integrations.
 
 ## Get an authorized copy
@@ -35,9 +37,11 @@ Publishing and granting access are separate tasks; see [access requirements](ACC
 2. Use `/setup-video-production`, or open
    [the setup prompt](.github/prompts/setup-video-production.prompt.md) and choose
    **Chat: Run Prompt**. Allow only the setup/file operations you intend.
-3. Review any missing MCP prerequisites. Configure servers from approved
-   instructions for your installed versions, with secrets outside the repository.
-   This template deliberately contains no guessed server addresses or credentials.
+3. Follow the [Camtasia MCP connection guide](CAMTASIA-MCP.md) for the bundled
+   server, dependency installation, VS Code/Copilot examples and verification.
+   Approve installation/configuration separately; setup does not do it silently.
+   Obtain MicroStation MCP setup from its approved provider. Keep secrets and
+   live machine settings outside the repository.
 4. Reload the workspace if new customizations are not listed.
 5. Attach key-frame images, name the detail feature and use
    `/microstation-video` to request a film. Production then performs its own
@@ -53,11 +57,14 @@ customizations, not global user-profile settings.
 > `<LOCAL-TEMPLATE-CHECKOUT>`. Read and follow its
 > `.github/prompts/setup-video-production.prompt.md`.
 > Install the production skill with its reference files and both reusable
-> prompts. Merge a short routing section into my existing agent instructions;
+> prompts, plus the Camtasia MCP guide, server source/dependency manifest and
+> inert connection examples. Merge a short routing section into my existing agent instructions;
 > preserve other project rules, my README and any conflicting customizations.
 > Discover the MicroStation and Camtasia MCP tools without operating either
-> application. If a server is missing, identify the prerequisite and ask for
-> approved configuration rather than inventing settings or installing software.
+> application. If Camtasia MCP is missing, follow `CAMTASIA-MCP.md` to propose
+> a connection using the bundled server and resolved local paths. Ask separately
+> before dependency installation, configuration changes or server startup.
+> Do not invent a hosted URL or overwrite other MCP servers.
 > Validate frontmatter, relative links and workspace discovery locations.
 > Show how to use `/microstation-video` with my model, key frames and one
 > detailed feature. Do not start recording, alter a model/timeline, modify
@@ -65,6 +72,9 @@ customizations, not global user-profile settings.
 
 Use your own checkout path; no original author's machine path is required
 by the production skill.
+
+For a connection-only setup prompt and exact launch configuration, see
+[Camtasia MCP setup](CAMTASIA-MCP.md#prompt-to-configure-this-connection).
 
 ## First production request
 

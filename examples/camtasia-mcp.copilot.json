@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "camtasia": {
+      "type": "local",
+      "command": "C:\\REPLACE_WITH_YOUR_CHECKOUT\\integrations\\camtasia\\.venv\\Scripts\\python.exe",
+      "args": [
+        "C:\\REPLACE_WITH_YOUR_CHECKOUT\\integrations\\camtasia\\camtasia_mcp_server.py"
+      ],
+      "tools": [
+        "*"
+      ]
+    }
+  }
+}
