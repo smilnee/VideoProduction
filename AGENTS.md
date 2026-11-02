@@ -14,7 +14,9 @@ starting production. For Camtasia MCP connection setup, use the
 [bundled server and guide](CAMTASIA-MCP.md); obtain separate approval for
 dependency installation, live configuration changes or server startup.
 For publication, follow [access requirements](ACCESS.md):
-never equate a private personal repository with enforced Bentley identity,
+the template is public, not Bentley-identity-restricted; public source access
+does not authorize uploading project models, footage or settings.
+Never equate a private personal repository with enforced Bentley identity,
 and upload only reviewed template/integration sources, not project media or credentials.
 
 ## Scope and tools

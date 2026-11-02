@@ -1,10 +1,20 @@
-# Private publication and Bentley-only access
+# Repository visibility and access
 
 The [smilnee/VideoProduction template](https://github.com/smilnee/VideoProduction)
-was created privately on 2026-11-02 under the owner's personal account.
-No collaborators were added at initial publication. Corporate email-domain
-restriction/SSO is **not configured or enforced**. The requirements below explain
-what would be needed for Bentley-only sharing.
+is public at the owner's explicit request on 2026-11-02, superseding its initial
+private publication and earlier Bentley-only sharing request. Anyone can read,
+clone or download the repository and its published history without a GitHub
+login. It is not restricted to Bentley or any email domain.
+
+Public read access does not grant write or administrator access. GitHub Copilot
+still requires its own sign-in/entitlement, and application licences, model
+availability and organization policies still apply. The public template contains
+reusable workflow/integration sources, not project models, footage, credentials
+or machine-specific MCP settings. Do not publish those when using it.
+
+Making a repository private later cannot recall copies already downloaded.
+The guidance below applies if restricted sharing is requested again; it is not
+a description of the current public repository.
 
 ## A personal repository is not an email-domain gate
 
@@ -14,14 +24,12 @@ A profile email, an invitation email or domain verification alone is not that
 authentication control. Private visibility prevents public access but does not
 enforce Bentley corporate identity.
 
-The requested `smilnee/VideoProduction` destination is under a personal GitHub
-account. Do not describe it as Bentley-SSO-enforced. The owner selected private
-personal-account publication after the domain-enforcement limitation was
-explained. This does not satisfy the original Bentley-only login requirement.
-Before sharing, either agree a manually approved collaborator policy or move to
-the managed-organization route; manual invitations are not domain enforcement.
+The `smilnee/VideoProduction` destination is under a personal GitHub account.
+Do not describe it as Bentley-SSO-enforced. For future restricted sharing,
+either agree a manually approved private collaborator policy or move to the
+managed-organization route; manual invitations are not domain enforcement.
 
-## Required organization route
+## For future organization-only sharing
 
 A Bentley GitHub/identity administrator must confirm:
 
@@ -51,7 +59,10 @@ properly scoped approval.
 - Inspect the existing destination before creating or modifying a repository.
   Do not overwrite another project's history or make an unrelated repository
   private. Ask if the owner or intended access model is ambiguous.
-- Create/publish privately only after the owner/access route is confirmed.
+- Use the owner's explicitly approved visibility. Default new destinations to
+  private unless public release is authorized. Before making a repository
+  public, review all reachable published history as well as current files for
+  secrets, personal paths, proprietary project data and unapproved source.
   Upload only reviewed template documentation/customizations, validation code
   and approved integration sources, not model files, footage,
   editor projects, local evidence, tokens or machine-specific settings.
@@ -59,8 +70,9 @@ properly scoped approval.
   separately from visibility. Do not assume a copied repository inherits
   private visibility, SSO or team access.
 - Read back `private`/visibility, owner, default branch, template status, latest
-  commit and effective access grants. Verify SSO/identity restrictions through
-  authorized administrator evidence, not from visibility alone.
+  commit and effective access grants. For public access, also verify anonymous
+  retrieval without an Authorization header. Verify any claimed SSO/identity
+  restrictions through authorized administrator evidence, not visibility alone.
 - Report publication and identity enforcement as separate PASS/unresolved
   results. If authentication or the organization is missing, retain the local
   deliverable and state the blocker; do not claim a repository URL is live.

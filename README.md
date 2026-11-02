@@ -4,11 +4,28 @@ Reusable across architecture, infrastructure, engineering and other MicroStation
 projects. Updated 2026-11-02 from the successful atrium recording and the later
 full-screen reception tour/revision.
 
-Private GitHub template:
+Public GitHub template:
 [smilnee/VideoProduction](https://github.com/smilnee/VideoProduction).
-Access is owner-only at initial publication; an `@bentley.com` login restriction
-is **not** enforced on this personal repository. See [access requirements](ACCESS.md)
-before granting or changing access.
+Anyone can read or download it without a GitHub login. This is not restricted
+to Bentley or any email domain. GitHub Copilot still requires its own sign-in
+and model entitlement. See [visibility and access](ACCESS.md).
+
+## One prompt to get started
+
+Paste this into your AI agent; it can handle the download and workspace setup:
+
+> Download https://github.com/smilnee/VideoProduction and set up its
+> MicroStation/Camtasia AI workflow in my current workspace. Read the
+> repository's setup guide and follow its setup prompt. Preserve my existing
+> files and instructions. Check the required applications, AI models and MCP
+> connections; ask before installing software or changing live settings.
+> Finish with a plan-only example. Do not edit a model, change a timeline or
+> start recording.
+
+The public download needs no GitHub credentials. Running the workflow still
+requires Windows, MicroStation, Camtasia and a compatible authenticated Copilot
+client with access to the configured models. Missing prerequisites are reported,
+not silently installed or replaced.
 
 ## Start here
 
@@ -31,8 +48,8 @@ before granting or changing access.
 - [Runnable setup prompt](.github/prompts/setup-video-production.prompt.md):
   `/setup-video-production` installs/validates workspace customizations only;
   it does not start recording or change the model/editor.
-- [Private publication and Bentley access requirements](ACCESS.md):
-  private visibility is not an email-domain login restriction.
+- [Public visibility and future restricted-sharing requirements](ACCESS.md):
+  public source access does not make your project files public.
 
 Open this folder as a VS Code workspace with the MicroStation and Camtasia MCP
 servers configured. Skills and prompts must be available in the active workspace;

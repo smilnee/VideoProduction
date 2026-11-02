@@ -7,30 +7,47 @@ dependencies, register servers, install MicroStation/Camtasia or provide a
 GitHub Copilot subscription.
 Use VS Code with GitHub Copilot Chat in Agent mode and approved MCP integrations.
 
-## Get an authorized copy
+## Start with one prompt
+
+No manual clone or slash-command knowledge is needed. Paste this into your
+AI agent in the workspace you want to prepare:
+
+> Download https://github.com/smilnee/VideoProduction and set up its
+> MicroStation/Camtasia AI workflow in my current workspace. Read the
+> repository's setup guide and follow its setup prompt. Preserve my existing
+> files and instructions. Check the required applications, AI models and MCP
+> connections; ask before installing software or changing live settings.
+> Finish with a plan-only example. Do not edit a model, change a timeline or
+> start recording.
+
+Use an existing local copy if present; otherwise the agent can clone the public
+HTTPS repository or download its ZIP without a GitHub account. If it cannot
+retrieve files or prepare the workspace, it must report that prerequisite.
+It must not claim model routing is active before the client discovers the agents.
+
+## Get a public copy
 
 The template is [smilnee/VideoProduction](https://github.com/smilnee/VideoProduction).
-Request access from its owner; corporate email alone does not grant access.
-If the repository is later transferred, use the administrator-confirmed URL.
-Sign in locally with an authorized GitHub identity; do not paste a token into
-Copilot chat or commit credentials. If corporate SSO is required, authorize
-the Git/CLI credential through that organization's approved process.
+Reading, cloning or downloading this public repository requires no GitHub login.
+GitHub Copilot itself still needs an authenticated account/subscription or
+applicable entitlement, plus access to the configured models. Public source
+availability does not remove application licences or organization MCP policies.
+Do not paste tokens into chat or commit credentials.
 
-Clone the approved repository or use its **Use this template** option if the
-owner has enabled that GitHub setting. Repository copies do not automatically
-inherit the original repository's access restrictions: choose a private,
-approved destination and verify its access policy separately.
+If creating a new GitHub repository through **Use this template**, GitHub
+authentication is required. Choose an approved destination/visibility separately;
+this public template does not authorize publishing your models or recordings.
 
-For an authorized account:
+Optional manual download with Git:
 
 ```powershell
-gh auth login --hostname github.com
-gh repo clone smilnee/VideoProduction
+git clone https://github.com/smilnee/VideoProduction.git
 Set-Location .\VideoProduction
 code .
 ```
 
-Publishing and granting access are separate tasks; see [access requirements](ACCESS.md).
+Without Git, use GitHub's **Code > Download ZIP**, then extract locally.
+Publishing and write access remain separate tasks; see [access requirements](ACCESS.md).
 
 ## Use in this template workspace
 
