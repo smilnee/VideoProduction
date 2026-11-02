@@ -14,21 +14,24 @@ and model entitlement. See [visibility and access](ACCESS.md).
 
 Paste this into your AI agent; it can handle the download and workspace setup:
 
-> Download https://github.com/smilnee/VideoProduction and set up its
-> MicroStation/Camtasia AI workflow in my current workspace. Read the
-> repository's setup guide and follow its setup prompt. Preserve my existing
-> files and instructions. Check the required applications, AI models and MCP
-> connections; ask before installing software or changing live settings.
-> Finish with a plan-only example. Do not edit a model, change a timeline or
-> start recording.
+> Using https://github.com/smilnee/VideoProduction, set up its
+> MicroStation/Camtasia workflow in my workspace. Follow its setup guide and
+> check the required applications, AI models and MCP connections. When complete,
+> give me simple user instructions and a sample prompt.
 
 The public download needs no GitHub credentials. Running the workflow still
 requires Windows, MicroStation, Camtasia and a compatible authenticated Copilot
 client with access to the configured models. Missing prerequisites are reported,
 not silently installed or replaced.
+The setup guide keeps existing files safe and requires approval before software
+installation or live settings changes. Setup does not start recording or edit
+models/timelines.
 
 ## Start here
 
+- [Simple user guide, first-film prompts and optional contributions](USER-GUIDE.md):
+  no fork is needed to try it; the guide explains forks and pull requests if
+  you want to send improvements back.
 - [Orchestrator and approved model/reasoning routes](ORCHESTRATION.md):
   `/orchestrate-video` or select **vp-orchestrator** in the Copilot harness.
   Astra handles native 3D work; Sol handles Camtasia and supporting roles.

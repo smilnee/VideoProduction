@@ -4,13 +4,17 @@ agent: "agent"
 ---
 
 Set up the current workspace for MicroStation and Camtasia video production
-using an authorized local checkout of the VideoProduction template.
+using the user-approved VideoProduction source.
 This is setup only: do not record, edit a model, move cameras, change a timeline,
 install software, publish files or change repository access.
 
-1. Establish the local template checkout and target workspace. Use the current
-   folder if it is the template; otherwise ask for the checkout location if it
-   is not supplied. Do not fetch a guessed GitHub repository or ask for tokens.
+1. Establish the target workspace and source copy. Reuse an existing local
+   checkout when supplied or discoverable. If the user supplied the explicit
+   public repository URL, obtain a local copy by HTTPS clone or ZIP download
+   in a suitable nonconflicting folder; do not make the user clone it manually.
+   Do not overwrite an existing folder, initialize Git in the target project
+   or alter its remotes. If no approved source is supplied or discoverable,
+   ask once. Do not fetch a guessed repository or request tokens for public reads.
 2. Read the template's [rules](../../AGENTS.md),
    [overview](../../README.md) and
    [production skill](../skills/microstation-camtasia-video/SKILL.md).
@@ -29,6 +33,7 @@ install software, publish files or change repository access.
    - `.github/prompts/orchestrate-video.prompt.md`.
    - `.github/agents/vp-*.agent.md` (all twelve profiles).
    - `ORCHESTRATION.md`.
+   - `USER-GUIDE.md` and `COPILOT-SETUP.md`.
    - `ACCESS.md` (retain the original-template disclaimer; adapt any target
      publication instructions to the actual authorized repository).
    - `scripts/validate-orchestration.cjs` and `tests/orchestration.test.cjs`.
@@ -53,6 +58,8 @@ install software, publish files or change repository access.
    independent QA and single-controller application/desktop discipline.
    Adapt copied links to the target's actual instruction file, including when
    it uses `.github/copilot-instructions.md` rather than root `AGENTS.md`.
+   Route template-overview links to the installed `USER-GUIDE.md` when the
+   target README is absent or describes a different project.
    Do not add a competing always-on file or replace the target README merely
    to satisfy a template link. Revalidate every copied local link afterward.
 5. Discover whether MicroStation and Camtasia MCP tool definitions are available,
@@ -73,10 +80,22 @@ install software, publish files or change repository access.
    has not refreshed; report runtime discovery as unverified unless observed.
    Explain that the Copilot harness must honour model and reasoning-effort.
    Do not claim fallback/harness compatibility or app connections from static tests.
-7. Show the installed files, any remaining prerequisites and how to invoke
-   `/microstation-video` with key frames and a named detail feature. Link the
-   Camtasia connection guide and its connection-only setup prompt.
-   Also show `/orchestrate-video` with a plan-only example and the model table.
+7. Finish with simple user instructions in chat:
+   - Ready / Missing / Not verified status for applications, model/effort access,
+     MCP configuration/connections and agent discovery; do not call live tools
+     merely to turn an unverified status into a pass.
+   - Installed/merged paths and only the remaining actions the user must take,
+     such as sign-in, approval or reloading discovery, with reasons.
+   - How to select the coordinator, attach key frames and identify a detail,
+     monitor and Camtasia destination; slash commands are optional shortcuts.
+   - A ready-to-paste plan-only example and a separate sample film request.
+     Do not execute those samples during setup.
+   - Links to the [user guide](../../USER-GUIDE.md), relevant Camtasia connection
+     instructions and model table. Explain that forks are optional and only
+     needed for the contribution workflow; do not fork, push or open a pull
+     request without a separate user request.
+   Do not overwrite the target README or create extra instruction/handoff files
+   merely to present this summary.
 
 Do not silently enable MCP servers, grant tool permissions or modify the user's
 global Copilot settings. Ask separately for any required personal installation.

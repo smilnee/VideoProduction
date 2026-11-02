@@ -12,18 +12,34 @@ Use VS Code with GitHub Copilot Chat in Agent mode and approved MCP integrations
 No manual clone or slash-command knowledge is needed. Paste this into your
 AI agent in the workspace you want to prepare:
 
-> Download https://github.com/smilnee/VideoProduction and set up its
-> MicroStation/Camtasia AI workflow in my current workspace. Read the
-> repository's setup guide and follow its setup prompt. Preserve my existing
-> files and instructions. Check the required applications, AI models and MCP
-> connections; ask before installing software or changing live settings.
-> Finish with a plan-only example. Do not edit a model, change a timeline or
-> start recording.
+> Using https://github.com/smilnee/VideoProduction, set up its
+> MicroStation/Camtasia workflow in my workspace. Follow its setup guide and
+> check the required applications, AI models and MCP connections. When complete,
+> give me simple user instructions and a sample prompt.
 
 Use an existing local copy if present; otherwise the agent can clone the public
 HTTPS repository or download its ZIP without a GitHub account. If it cannot
 retrieve files or prepare the workspace, it must report that prerequisite.
 It must not claim model routing is active before the client discovers the agents.
+Follow [the setup prompt](.github/prompts/setup-video-production.prompt.md):
+preserve existing work, ask before software/live settings changes, and leave
+models, timelines and recorders untouched. The short user prompt does not waive
+these safeguards.
+
+## What setup must return
+
+Give the user concise instructions in chat, not just a list of installed files:
+
+- Ready / Missing / Not verified status and the few actions still requiring
+  their approval, sign-in or client reload.
+- Where the framework was installed, how to select the coordinator and what
+  references/feature/monitor/destination to supply.
+- A ready-to-paste plan-only example and a separate sample production request.
+- The [user guide](USER-GUIDE.md), relevant setup/troubleshooting links and the
+  optional fork/pull-request route for contributing improvements.
+
+Do not overwrite the project's README or create extra handoff files unless
+requested. A generated sample prompt is not permission to execute it.
 
 ## Get a public copy
 
@@ -83,6 +99,7 @@ customizations, not global user-profile settings.
 > validation script/tests, plus the Camtasia MCP guide, server source/dependency manifest and
 > inert connection examples. Include ACCESS.md while distinguishing the
 > original template's access from my target repository's actual policy.
+> Include USER-GUIDE.md and COPILOT-SETUP.md for the user's ongoing instructions.
 > Merge a short routing section into my existing agent instructions;
 > preserve other project rules, my README and any conflicting customizations.
 > Discover the MicroStation and Camtasia MCP tools without operating either
@@ -98,6 +115,9 @@ customizations, not global user-profile settings.
 > Show how to use `/microstation-video` with my model, key frames and one
 > detailed feature. Do not start recording, alter a model/timeline, modify
 > global settings, publish files or request credentials in chat.
+> Finish with simple user instructions, remaining blockers, a plan-only example
+> and a sample production prompt. Link the user guide and optional contribution
+> instructions; do not create a fork or publish anything during setup.
 
 Use your own checkout path; no original author's machine path is required
 by the production skill.
