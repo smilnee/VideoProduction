@@ -12,6 +12,10 @@ before granting or changing access.
 
 ## Start here
 
+- [Orchestrator and approved model/reasoning routes](ORCHESTRATION.md):
+  `/orchestrate-video` or select **vp-orchestrator** in the Copilot harness.
+  Astra handles native 3D work; Sol handles Camtasia and supporting roles.
+  Start with a plan-only request, then verify runtime availability before production.
 - [Project rules](AGENTS.md): safety, genuine footage and delivery standards.
 - [Production skill](.github/skills/microstation-camtasia-video/SKILL.md):
   the repeatable capture, camera, editing and verification workflow.
@@ -34,7 +38,8 @@ Open this folder as a VS Code workspace with the MicroStation and Camtasia MCP
 servers configured. Skills and prompts must be available in the active workspace;
 placing this template beside another project does not globally install them.
 For another project, follow the setup guide: copy the skill/references and
-prompts, and merge routing rules into existing instructions rather than
+prompts, all `vp-*` agent profiles, orchestration guide and validation scripts,
+and merge routing rules into existing instructions rather than
 overwriting them or replacing the project's README. Keep the skill and its
 reference together. Reload the workspace if new customizations are not discovered.
 
@@ -52,7 +57,8 @@ the supplied ignore rules are a safeguard, not a substitute for reviewing upload
 
 ## Sample user prompt
 
-> Using the currently open MicroStation model and my attached key-frame images,
+> Using the vp-orchestrator and approved model/reasoning routes, the currently
+> open MicroStation model and my attached key-frame images,
 > make a smooth 25-second camera tour showing this project's capabilities.
 > Record the whole intended monitor, including the complete MicroStation UI and
 > the real agent panel beside it. Focus briefly on one existing high-detail
@@ -80,6 +86,11 @@ preserved existing Camtasia edit. Its keyboard legends measured 9-10 pixels in
 decoded 1080p delivery frames. Full redraws removed large paving dropouts in
 the inspected sequence, but fine screen-artwork edge aliasing remained.
 Neither motion counts nor those successful checks certify universal no-flicker.
+
+The orchestration layer routes future work; it does not rerun these completed
+productions. Its authored configuration can be checked with
+`node .\scripts\validate-orchestration.cjs` and
+`node --test .\tests\orchestration.test.cjs`; no npm dependencies are required.
 
 These are examples, not fixed model names, coordinates, units, clip IDs,
 durations or gates for future projects. Do not replay their completed scripts.

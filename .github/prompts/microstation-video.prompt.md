@@ -1,10 +1,11 @@
 ---
 description: "Produce a genuine whole-screen MicroStation capability demonstration and safely append it to the current Camtasia edit."
-agent: "agent"
+agent: vp-orchestrator
 ---
 
 Use the [production skill](../skills/microstation-camtasia-video/SKILL.md)
-and [workspace rules](../../AGENTS.md).
+and [workspace rules](../../AGENTS.md), coordinated through the
+[approved model routes](../../ORCHESTRATION.md).
 
 Make a smooth 25-second tour of the currently open MicroStation model using my
 attached key-frame images. Show this project's capabilities, not a fabricated

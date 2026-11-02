@@ -3,6 +3,10 @@
 Read [the template overview](README.md). For recording, camera tours, development
 footage or Camtasia edits, load the
 [production skill](.github/skills/microstation-camtasia-video/SKILL.md).
+For model-routed work, use the
+[orchestrator and approved specialist profiles](ORCHESTRATION.md).
+Keep exact model/reasoning allocations, single-controller application access
+and independent evidence gates; do not silently substitute models.
 Documentation-only work must leave applications, models and timelines untouched.
 For Copilot adoption/setup, follow
 [the setup prompt](.github/prompts/setup-video-production.prompt.md) without
@@ -30,6 +34,10 @@ and upload only reviewed template/integration sources, not project media or cred
 - Protect the original project and media. Preserve unrelated clips and settings.
   Restore affected MicroStation views, selection and protected clips afterwards;
   keep MicroStation open unless the user asks otherwise.
+- Model-bound workers perform their own scoped application actions. The
+  coordinator plans/dispatches without application or shell access. A recorder
+  can observe one active scene worker; no concurrent modelling/camera writers
+  or competing desktop focus changes.
 
 ## Genuine footage and quality
 

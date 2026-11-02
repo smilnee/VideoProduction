@@ -52,7 +52,8 @@ properly scoped approval.
   Do not overwrite another project's history or make an unrelated repository
   private. Ask if the owner or intended access model is ambiguous.
 - Create/publish privately only after the owner/access route is confirmed.
-  Upload the template documentation/customizations, not model files, footage,
+  Upload only reviewed template documentation/customizations, validation code
+  and approved integration sources, not model files, footage,
   editor projects, local evidence, tokens or machine-specific settings.
 - If GitHub's template setting is wanted, enable and verify `is_template`
   separately from visibility. Do not assume a copied repository inherits

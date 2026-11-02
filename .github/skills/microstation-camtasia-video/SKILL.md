@@ -9,6 +9,9 @@ Follow the active project's model authority and
 [technical techniques](./references/production-techniques.md).
 This skill supplies a workflow, not permission to build geometry or replay an
 earlier project's controller. Documentation changes need no live application calls.
+Use the [orchestrator](../../../ORCHESTRATION.md) for approved model/reasoning
+routing, minimal specialist selection, single-controller live application work
+and independent verification. Never turn its setup into a replay of past builds.
 For missing Camtasia MCP tools, use the
 [connection guide](../../../CAMTASIA-MCP.md) and bundled server/configuration
 examples. Obtain approval before installing dependencies or changing/starting
